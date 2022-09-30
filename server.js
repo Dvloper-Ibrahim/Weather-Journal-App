@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // Cors for cross origin allowance
 app.use(cors());
 // Initialize the main project folder
-app.use(express.static('./'));
+app.use(express.static('website'));
 // Setup Server
 const port = 8000;
 app.listen(port, () => {
