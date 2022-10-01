@@ -1,5 +1,8 @@
+import dotenv from "dotenv";
+
+dotenv.config()
 /* Global Variables */
-const myApiKey = '49210dac16cad6ef759b6becc7f89503';
+const myApiKey = process.env.APIKEY;
 const generate = document.getElementById('generate');
 
 
