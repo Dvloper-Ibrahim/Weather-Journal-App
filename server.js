@@ -29,7 +29,6 @@ app.use(cors());
 app.use(express.static('./'));
 
 
-
 // Setup Server
 const port = 8000;
 app.listen(port, () => {
