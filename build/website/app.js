@@ -8,8 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 /* Global Variables */
-const myApiKey = '49210dac16cad6ef759b6becc7f89503';
+const myApiKey = process.env.APIKEY;
 const generate = document.getElementById('generate');
 // Create a new date instance dynamically with JS
 let d = new Date();
