@@ -1,0 +1,185 @@
+body {
+  background: #fffff8;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    135deg,
+    #210043 15%,
+    #700690 40%,
+    rgb(199, 36, 164) 100%
+  );
+}
+
+#app {
+  display: grid;
+  /* grid-auto-rows: minmax(132px, auto); */
+  grid-template-columns: auto 180px auto;
+  grid-template-rows: 100px 120px 200px;
+  height: 100vh;
+  /* background: #f23557; */
+  color: wheat;
+  justify-content: center;
+  /* grid-gap: 1em; */
+  row-gap: 25px;
+  column-gap: 100px;
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.feel {
+  order: 7;
+  grid-row: 3/4;
+  position: relative;
+}
+
+.entry {
+  top: 788px;
+  left: 300px;
+  width: 330px;
+  height: 300px;
+  color: black;
+  grid-column: span 1;
+  color: wheat;
+  order: 6;
+  grid-column: span 2;
+}
+
+#entryHolder {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+#date,
+#temp,
+#content {
+  margin-top: 10px;
+  position: relative;
+  top: 15px;
+  left: 10px;
+  color: black;
+  font-style: italic;
+  width: 300px;
+  overflow: auto;
+}
+
+#date::before,
+#temp::before,
+#content::before {
+  content: attr(data-name);
+}
+
+.headline {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 50px;
+  font-weight: 700;
+  grid-column: span 3;
+}
+.title {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display: block;
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  height: 50px;
+  width: 320px;
+  margin-bottom: 10px;
+  background: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  border-radius: 7px;
+  padding-left: 10px;
+}
+
+button {
+  width: 170px;
+  height: 50px;
+  background: #3b4a6b;
+  color: wheat;
+  font-size: 26px;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+  border-radius: 7px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -70px;
+  right: -190px;
+}
+
+button:hover {
+  box-shadow: 2px 4px 5px #444 inset;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+  background: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 0 0 10px;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 5px solid rgb(0, 195, 255);
+}
+
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: rgb(170, 170, 170);
+  font-family: "Roboto", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(170, 170, 170);
+  font-family: "Roboto", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(170, 170, 170);
+  font-family: "Roboto", sans-serif;
+}
+
+/* For Small Screens */
+@media (max-width: 790px) {
+  #app {
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .feel {
+    order: 2;
+  }
+  button {
+    width: 200px;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .entry {
+    margin-top: 70px;
+  }
+}
